@@ -10,6 +10,9 @@ app.use(morgan("combined"));
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send({ message: "Hello, World! This is the Tab Tracker API." });
+});
 app.get("/status", (req, res) => {
   res.send({ message: "Hello, World! This is the Tab Tracker API." });
 });
